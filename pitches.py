@@ -33,7 +33,12 @@ def about():
 @app.route("/register")
 def register():
     form = RegistrationForm
-    return render_template('register.html', title='login',form=form)
+    return render_template('register.html', title='register',form=form)
+
+@app.route("/login")
+def login():
+    form = LoginForm
+    return render_template('login.html', title='login',form=form)
 
 if __name__=='__main__':
     app.run(debug=True)
