@@ -1,10 +1,21 @@
-from crypt import methods
+
 from flask import Flask,render_template,url_for,flash,redirect
-
+from flask_sqlalchemy import SQLAlchemy
 from forms import RegistrationForm,LoginForm
-app =Flask(__name__)
 
+
+app =Flask(__name__)
 app.config['SECRET_KEY']='190b6b2c1c409cce5aa9432a723f1f45'
+app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///site.db'
+db = SQLAlchemy(app)
+
+class User(db.model):
+    id = db.column(db.Integer,primary_key=True)
+    username =db.Column(db.String(15),unique=True,nullable=False)
+    username = db.Column(db.String(100),unique=True,nullable=False)
+    image_file = db.Collumn(db.String(28),nullable=False,default='default.jpg')
+    password = db.Column(db.String(35),nullable=False)
+    
 
 posts = [
     {
