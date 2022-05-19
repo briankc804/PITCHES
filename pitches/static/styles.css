@@ -1,7 +1,7 @@
 body {
   
-    background: #fafafa;
-    color: #333333;
+    background: black;
+    color: blue;
     margin-top: 5rem;
   }
   
@@ -10,7 +10,7 @@ body {
   }
   
   .bg-steel {
-    background-color: #5f788a;
+    background-color: grey;
   }
   
   .site-header .navbar-nav .nav-link {
