@@ -1,4 +1,4 @@
-#!/home/briankc/Documents/PITCHES/virtual/bin/python
+#!/home/briankc/Documents/PITCHES/virtual/bin/python3.10
 # -*- coding: utf-8 -*-
 import re
 import sys
